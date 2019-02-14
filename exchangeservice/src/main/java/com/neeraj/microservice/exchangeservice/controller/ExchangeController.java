@@ -10,12 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ExchangeController {
 
-    private static int apiCallCount = 0;
-
     @GetMapping("/exchange/{from}/{to}")
     private ExchangeRate getRate(@PathVariable("from") String fromCurrency, @PathVariable("to") String toCurrency){
-        apiCallCount++;
-        System.out.println("apiCallCount value is:" + apiCallCount);
         return new ExchangeRate("INR", "USD", 69.30);
     }
 }
