@@ -43,11 +43,10 @@ public class CalculatorController {
                                               @PathVariable("amount") int amount){
 
         CalculatedValue forObject = proxy.getRate(fromCurrency,toCurrency);
-        System.out.println(forObject);
         forObject.setAmount(amount);
         double calculatedValue = forObject.getExchangePrice() * amount;
         forObject.setCalculatedAmount(calculatedValue);
-        forObject.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
+        System.out.println(forObject);
         return forObject;
     }
 }

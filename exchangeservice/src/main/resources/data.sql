@@ -1,2 +1,2 @@
-insert into exchange_rate (id , currency_from , currency_to , exchange_price) values (1001,'USD','INR',69.50);
-insert into exchange_rate (id , currency_from , currency_to , exchange_price) values (1002,'EUR','INR',70.50);
+insert into exchange_rate (id , currency_from , currency_to , exchange_price, port) values (1001,'USD','INR',69.50,0);
+insert into exchange_rate (id , currency_from , currency_to , exchange_price, port) values (1002,'EUR','INR',70.50,0);

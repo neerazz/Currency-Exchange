@@ -11,6 +11,7 @@ public class ExchangeRate {
     private String currencyFrom;
     private String currencyTo;
     private float exchangePrice;
+    private int port;
 
     public ExchangeRate() {
     }
@@ -25,31 +26,44 @@ public class ExchangeRate {
         return id;
     }
 
-    public void setId(int id) {
+    public ExchangeRate setId(int id) {
         this.id = id;
+        return this;
     }
 
     public String getCurrencyFrom() {
         return currencyFrom;
     }
 
-    public void setCurrencyFrom(String currencyFrom) {
+    public ExchangeRate setCurrencyFrom(String currencyFrom) {
         this.currencyFrom = currencyFrom;
+        return this;
     }
 
     public String getCurrencyTo() {
         return currencyTo;
     }
 
-    public void setCurrencyTo(String currencyTo) {
+    public ExchangeRate setCurrencyTo(String currencyTo) {
         this.currencyTo = currencyTo;
+        return this;
     }
 
     public float getExchangePrice() {
         return exchangePrice;
     }
 
-    public void setExchangePrice(float exchangePrice) {
+    public ExchangeRate setExchangePrice(float exchangePrice) {
         this.exchangePrice = exchangePrice;
+        return this;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public ExchangeRate setPort(int port) {
+        this.port = port;
+        return this;
     }
 }
