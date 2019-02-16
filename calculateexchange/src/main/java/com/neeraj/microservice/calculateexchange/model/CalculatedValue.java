@@ -2,16 +2,16 @@ package com.neeraj.microservice.calculateexchange.model;
 
 public class CalculatedValue {
 
-    private String fromINR;
-    private String toUSD;
+    private String currencyFrom;
+    private String currencyTo;
     private float exchangePrice;
     private int amount;
     private double calculatedAmount;
     private int port;
 
-    public CalculatedValue(String fromINR, String toUSD, float exchangePrice, int amount, double calculatedAmount, int port) {
-        this.fromINR = fromINR;
-        this.toUSD = toUSD;
+    public CalculatedValue(String currencyFrom, String currencyTo, float exchangePrice, int amount, double calculatedAmount, int port) {
+        this.currencyFrom = currencyFrom;
+        this.currencyTo = currencyTo;
         this.exchangePrice = exchangePrice;
         this.amount = amount;
         this.calculatedAmount = calculatedAmount;
@@ -21,20 +21,20 @@ public class CalculatedValue {
     public CalculatedValue() {
     }
 
-    public String getFromINR() {
-        return fromINR;
+    public String getCurrencyFrom() {
+        return currencyFrom;
     }
 
-    public void setFromINR(String fromINR) {
-        this.fromINR = fromINR;
+    public void setCurrencyFrom(String currencyFrom) {
+        this.currencyFrom = currencyFrom;
     }
 
-    public String getToUSD() {
-        return toUSD;
+    public String getCurrencyTo() {
+        return currencyTo;
     }
 
-    public void setToUSD(String toUSD) {
-        this.toUSD = toUSD;
+    public void setCurrencyTo(String currencyTo) {
+        this.currencyTo = currencyTo;
     }
 
     public float getExchangePrice() {
@@ -72,8 +72,8 @@ public class CalculatedValue {
     @Override
     public String toString() {
         return "CalculatedValue{" +
-                "fromINR='" + fromINR + '\'' +
-                ", toUSD='" + toUSD + '\'' +
+                "currencyFrom='" + currencyFrom + '\'' +
+                ", currencyTo='" + currencyTo + '\'' +
                 ", exchangePrice=" + exchangePrice +
                 ", amount=" + amount +
                 ", calculatedAmount=" + calculatedAmount +

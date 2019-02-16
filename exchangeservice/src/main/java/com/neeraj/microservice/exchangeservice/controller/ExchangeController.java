@@ -15,7 +15,7 @@ public class ExchangeController {
     @Autowired
     private ExchangeRateRepository exchangeRateRepository;
 
-    @GetMapping("/exchange/{from}/{to}")
+    @GetMapping("/exchange/from/{from}/to/{to}")
     private ExchangeRate getRate(@PathVariable("from") String fromCurrency, @PathVariable("to") String toCurrency){
         return exchangeRateRepository.findByCurrencyFromAndCurrencyTo(fromCurrency,toCurrency);
     }
