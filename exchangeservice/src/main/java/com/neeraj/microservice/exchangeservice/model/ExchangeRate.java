@@ -1,33 +1,48 @@
 package com.neeraj.microservice.exchangeservice.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ExchangeRate {
-    private String fromINR;
-    private String toUSD;
+
+    @Id
+    private int id;
+    private String currencyFrom;
+    private String currencyTo;
     private float exchangePrice;
 
     public ExchangeRate() {
     }
 
-    public ExchangeRate(String fromINR, String toUSD, double exchangePrice) {
-        this.fromINR = fromINR;
-        this.toUSD = toUSD;
+    public ExchangeRate(String currencyFrom, String currencyTo, double exchangePrice) {
+        this.currencyFrom = currencyFrom;
+        this.currencyTo = currencyTo;
         this.exchangePrice = Float.parseFloat(String.valueOf(exchangePrice));
     }
 
-    public String getFromINR() {
-        return fromINR;
+    public int getId() {
+        return id;
     }
 
-    public void setFromINR(String fromINR) {
-        this.fromINR = fromINR;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getToUSD() {
-        return toUSD;
+    public String getCurrencyFrom() {
+        return currencyFrom;
     }
 
-    public void setToUSD(String toUSD) {
-        this.toUSD = toUSD;
+    public void setCurrencyFrom(String currencyFrom) {
+        this.currencyFrom = currencyFrom;
+    }
+
+    public String getCurrencyTo() {
+        return currencyTo;
+    }
+
+    public void setCurrencyTo(String currencyTo) {
+        this.currencyTo = currencyTo;
     }
 
     public float getExchangePrice() {

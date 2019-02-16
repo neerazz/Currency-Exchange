@@ -14,7 +14,7 @@ public class CalculatedValue {
         this.toUSD = toUSD;
         this.exchangePrice = exchangePrice;
         this.amount = amount;
-        this.calculatedAmount = amount * exchangePrice;
+        this.calculatedAmount = calculatedAmount;
         this.port = port;
     }
 
@@ -57,7 +57,7 @@ public class CalculatedValue {
         return calculatedAmount;
     }
 
-    public void setCalculatedAmount(int calculatedAmount) {
+    public void setCalculatedAmount(double calculatedAmount) {
         this.calculatedAmount = calculatedAmount;
     }
 
