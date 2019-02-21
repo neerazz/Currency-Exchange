@@ -2,6 +2,8 @@ package com.neeraj.microservice.calculateexchange.controller;
 
 import com.neeraj.microservice.calculateexchange.CalculateExchangeServiceProxy;
 import com.neeraj.microservice.calculateexchange.model.CalculatedValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +21,8 @@ public class CalculatorController {
 
     @Autowired
     private CalculateExchangeServiceProxy proxy;
+
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @GetMapping("/calculate/from/{from}/to/{to}/{amount}")
     public CalculatedValue getCalculatedvalue(@PathVariable("from") String fromCurrency,
@@ -46,7 +50,7 @@ public class CalculatorController {
         forObject.setAmount(amount);
         double calculatedValue = forObject.getExchangePrice() * amount;
         forObject.setCalculatedAmount(calculatedValue);
-        System.out.println(forObject);
+        log.info(forObject.toString());
         return forObject;
     }
 }

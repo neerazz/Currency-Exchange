@@ -25,48 +25,54 @@ public class CalculatedValue {
         return currencyFrom;
     }
 
-    public void setCurrencyFrom(String currencyFrom) {
+    public CalculatedValue setCurrencyFrom(String currencyFrom) {
         this.currencyFrom = currencyFrom;
+        return this;
     }
 
     public String getCurrencyTo() {
         return currencyTo;
     }
 
-    public void setCurrencyTo(String currencyTo) {
+    public CalculatedValue setCurrencyTo(String currencyTo) {
         this.currencyTo = currencyTo;
+        return this;
     }
 
     public float getExchangePrice() {
         return exchangePrice;
     }
 
-    public void setExchangePrice(float exchangePrice) {
+    public CalculatedValue setExchangePrice(float exchangePrice) {
         this.exchangePrice = exchangePrice;
+        return this;
     }
 
     public int getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public CalculatedValue setAmount(int amount) {
         this.amount = amount;
+        return this;
     }
 
     public double getCalculatedAmount() {
         return calculatedAmount;
     }
 
-    public void setCalculatedAmount(double calculatedAmount) {
+    public CalculatedValue setCalculatedAmount(double calculatedAmount) {
         this.calculatedAmount = calculatedAmount;
+        return this;
     }
 
     public int getPort() {
         return port;
     }
 
-    public void setPort(int port) {
+    public CalculatedValue setPort(int port) {
         this.port = port;
+        return this;
     }
 
     @Override
