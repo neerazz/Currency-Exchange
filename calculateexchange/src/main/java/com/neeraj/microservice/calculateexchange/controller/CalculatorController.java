@@ -1,7 +1,7 @@
 package com.neeraj.microservice.calculateexchange.controller;
 
-import com.neeraj.microservice.calculateexchange.CalculateExchangeServiceProxy;
 import com.neeraj.microservice.calculateexchange.model.CalculatedValue;
+import com.neeraj.microservice.calculateexchange.proxy.CalculateExchangeServiceProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
